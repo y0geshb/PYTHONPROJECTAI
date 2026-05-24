@@ -134,3 +134,42 @@ pytest tests/ -v --html=reports/report.html --self-contained-html
 pytest tests/ -v --alluredir=allure-results
 allure serve allure-results
 ```
+
+---
+
+## Security Setup
+
+### Environment Variables
+All secrets (passwords, tokens, API keys) are stored in a `.env` file that is excluded from git.
+
+1. Copy the template:
+   ```sh
+   copy .env.example .env
+   ```
+2. Fill in your values. Required variables:
+   ```env
+   API_BASE_URL=https://your-api-base-url.com
+   API_USER_EMAIL=your-test-email@example.com
+   API_USER_PASSWORD=your-test-password
+   MOCK_VALID_EMAIL=qa.mock.user@testdomain.com
+   MOCK_VALID_PASSWORD=MockPass#0000
+   ```
+3. **Never commit `.env` to git.** It is in `.gitignore`.
+
+### Security Best Practices
+- Never hardcode passwords, tokens, or emails in source files.
+- Never log received passwords (the mock server does not log passwords).
+- Rotate any credential that was ever pushed to git history.
+- See [SECURITY.md](SECURITY.md) for how to remove secrets from git history using `git filter-repo`.
+
+### Validating Environment Variables
+Use the `utilities/env_validation.py` helper in tests or startup code:
+```python
+from utilities.env_validation import check_required
+check_required()  # exits with error if API_BASE_URL is missing
+```
+
+---
+
+## Need Help?
+If you get stuck, check the Troubleshooting section above or see [SECURITY.md](SECURITY.md) for security-related guidance.

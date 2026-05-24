@@ -1,5 +1,14 @@
-# Environment and secrets — NEVER commit this file
+# Environment and secrets — NEVER commit these files
 .env
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+secrets.yaml
+config.local.py
+.env.local
+.env.*.local
 
 # Virtual environment
 venv/
@@ -32,4 +41,7 @@ Thumbs.db
 # Archived legacy files
 Archieve/
 Archieves/
+
+# Broken git metadata backups (created by setup_github.py recovery)
+.git.broken.*
 

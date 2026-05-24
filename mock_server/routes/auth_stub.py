@@ -1,4 +1,3 @@
-import email
 import os
 import re
 
@@ -9,10 +8,12 @@ from utilities.response_loader import load_response
 auth_bp = Blueprint("auth_bp", __name__)
 
 # -----------------------------
-# Mock valid credentials
+# Mock valid credentials – loaded from environment variables.
+# Set MOCK_VALID_EMAIL and MOCK_VALID_PASSWORD in your .env file.
+# These must NEVER be hardcoded in source code.
 # -----------------------------
-VALID_EMAIL = "kajal.gupta11@gmail.com"
-VALID_PASSWORD = "Password@123dd4"
+VALID_EMAIL = os.getenv("MOCK_VALID_EMAIL", "qa.mock.user@testdomain.com")
+VALID_PASSWORD = os.getenv("MOCK_VALID_PASSWORD", "MockPass#0000")
 
 
 @auth_bp.route("/api/auth/login", methods=["POST"])
@@ -25,12 +26,9 @@ def login():
     captcha = body.get("captchaToken")
     
     print("\n========== LOGIN REQUEST ==========")
-    print("FULL BODY =", body)
     print("EMAIL RECEIVED =", email)
-    print("PASSWORD RECEIVED =", password)
     print("CAPTCHA RECEIVED =", captcha)
-    print("EXPECTED EMAIL =", VALID_EMAIL)
-    print("EXPECTED PASSWORD =", VALID_PASSWORD)
+    # NOTE: Passwords are never logged
     print("===================================\n")
 
     # -----------------------------

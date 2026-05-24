@@ -1,17 +1,24 @@
 from __future__ import annotations
 
+import os
+
 import requests
 
 BASE_URL = "http://127.0.0.1:4010"
 LOGIN_URL = f"{BASE_URL}/api/auth/login"
+
+# Credentials for stub tests are loaded from environment variables.
+# Set MOCK_VALID_EMAIL and MOCK_VALID_PASSWORD in your .env file.
+_TEST_EMAIL = os.getenv("MOCK_VALID_EMAIL", "qa.mock.user@testdomain.com")
+_TEST_PASSWORD = os.getenv("MOCK_VALID_PASSWORD", "MockPass#0000")
 
 
 def test_login_stub_success_response_structure() -> None:
     response = requests.post(
         LOGIN_URL,
         json={
-            "email": "kajal.gupta@kellton.com",
-            "password": "Amazing@432!",
+            "email": _TEST_EMAIL,
+            "password": _TEST_PASSWORD,
             "captchaToken": "captcha-ok"
         },
         timeout=5,
