@@ -1,0 +1,18 @@
+{
+  "success": false,
+  "statusCode": 500,
+  "message": {
+    "en": "Unable to initialize UAE PASS flow.",
+    "ar": "تعذر تهيئة تدفق UAE PASS."
+  },
+  "error": {
+    "code": "AUTH_UAEPASS_START_INTERNAL_ERROR",
+    "details": [
+      "PKCE state generation failed."
+    ],
+    "fields": {}
+  },
+  "timestamp": "2026-05-22T10:02:01Z",
+  "traceId": "trace-auth-uaepass-start-server-failure",
+  "requestId": "req-auth-uaepass-start-server-failure"
+}

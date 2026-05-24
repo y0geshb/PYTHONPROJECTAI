@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 422,
+  "message": {
+    "en": "Refresh request failed validation.",
+    "ar": "فشل طلب التحديث في التحقق."
+  },
+  "error": {
+    "code": "AUTH_REFRESH_VALIDATION_FAILED",
+    "details": [
+      "refreshToken format is invalid."
+    ],
+    "fields": {
+      "refreshToken": "format"
+    }
+  },
+  "timestamp": "2026-05-22T10:01:05Z",
+  "traceId": "trace-auth-refresh-validation-failure",
+  "requestId": "req-auth-refresh-validation-failure"
+}

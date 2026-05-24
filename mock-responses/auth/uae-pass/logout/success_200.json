@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "UAE PASS logout initialized.",
+    "ar": "تم تهيئة تسجيل خروج UAE PASS."
+  },
+  "data": {
+    "logoutUrl": "https://stg-id.uaepass.ae/idshub/logout?post_logout_redirect_uri=https://portal.example.test/signed-out"
+  },
+  "timestamp": "2026-05-22T10:03:23Z",
+  "traceId": "trace-auth-uaepass-logout-success",
+  "requestId": "req-auth-uaepass-logout-success"
+}

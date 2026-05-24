@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "UAE PASS callback processed successfully.",
+    "ar": "تمت معالجة استدعاء UAE PASS بنجاح."
+  },
+  "data": {
+    "authToken": "jwt-access-token-uaepass-v1",
+    "refreshToken": "jwt-refresh-token-uaepass-v1",
+    "linkingRequired": false
+  },
+  "timestamp": "2026-05-22T10:02:02Z",
+  "traceId": "trace-auth-uaepass-callback-success",
+  "requestId": "req-auth-uaepass-callback-success"
+}

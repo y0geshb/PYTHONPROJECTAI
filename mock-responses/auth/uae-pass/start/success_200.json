@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "UAE PASS authorization flow initialized.",
+    "ar": "تم تهيئة تدفق تفويض UAE PASS."
+  },
+  "data": {
+    "redirectUrl": "https://stg-id.uaepass.ae/idshub/authorize?state=state-fixed-001&nonce=nonce-fixed-001",
+    "state": "state-fixed-001"
+  },
+  "timestamp": "2026-05-22T10:02:00Z",
+  "traceId": "trace-auth-uaepass-start-success",
+  "requestId": "req-auth-uaepass-start-success"
+}

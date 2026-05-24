@@ -1,0 +1,55 @@
+{
+  "auth_login": [
+    {
+      "description": "Valid user credentials",
+      "payload": {
+        "email": "testuser.one@testdomain.com",
+        "password": "TestPass#2026"
+      }
+    },
+    {
+      "description": "Valid admin credentials",
+      "payload": {
+        "email": "testadmin.one@testdomain.com",
+        "password": "AdminPass#2026"
+      }
+    }
+  ],
+  "users_create": [
+    {
+      "description": "Valid new user — full payload",
+      "payload": {
+        "name": "Priya Sharma",
+        "email": "priya.sharma@testdomain.com",
+        "role": "analyst",
+        "department": "Finance"
+      }
+    },
+    {
+      "description": "Valid new user — different department",
+      "payload": {
+        "name": "Rohan Mehta",
+        "email": "rohan.mehta@testdomain.com",
+        "role": "manager",
+        "department": "Operations"
+      }
+    }
+  ],
+  "users_update": [
+    {
+      "description": "Update user name and department",
+      "payload": {
+        "name": "Priya Sharma Updated",
+        "department": "Risk Management"
+      }
+    },
+    {
+      "description": "Update department only",
+      "payload": {
+        "name": "Rohan Mehta",
+        "department": "Technology"
+      }
+    }
+  ]
+}
+

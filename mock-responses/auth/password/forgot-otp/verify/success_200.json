@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "OTP verified. Reset token issued.",
+    "ar": "تم التحقق من رمز التحقق. تم إصدار رمز إعادة التعيين."
+  },
+  "data": {
+    "resetToken": "reset-token-v2"
+  },
+  "timestamp": "2026-05-22T10:03:06Z",
+  "traceId": "trace-auth-forgot-otp-verify-success",
+  "requestId": "req-auth-forgot-otp-verify-success"
+}

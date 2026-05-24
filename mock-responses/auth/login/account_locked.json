@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "message": {
+    "en": "Account is temporarily locked due to multiple failed attempts",
+    "ar": "الحساب مقفل مؤقتاً بسبب محاولات دخول متعددة فاشلة"
+  },
+  "error": {
+    "code": "AUTH_423_ACCOUNT_LOCKED",
+    "details": [
+      "AUTH_INVALID_PASSWORD"
+    ],
+    "fields": {}
+  }
+}

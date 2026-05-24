@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "If the account exists, password recovery instructions were sent.",
+    "ar": "إذا كان الحساب موجودًا، فقد تم إرسال تعليمات استعادة كلمة المرور."
+  },
+  "data": {
+    "accepted": true,
+    "resetToken": null,
+    "resetUrl": null
+  },
+  "timestamp": "2026-05-22T10:03:01Z",
+  "traceId": "trace-auth-forgot-email-anti-enumeration",
+  "requestId": "req-auth-forgot-email-anti-enumeration"
+}

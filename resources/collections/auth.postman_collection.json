@@ -1,0 +1,2031 @@
+{
+	"info": {
+		"_postman_id": "0d0963b7-59b5-4b1b-93a2-e61ecc2f856c",
+		"name": "Al Warra Auth Service API",
+		"description": "Postman collection for all endpoints in Al Warra Auth Service. Base path: /api/auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24807055"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\",\n  \"password\": \"Amazing@432!\",\n  \"captchaToken\": \"captcha-ok\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/login"
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\",\n  \"password\": \"Password@1234\",\n  \"captchaToken\": \"captcha-ok\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "539"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21b-oBr2D63Zhxd7Tj8kA7CZ3ntoEkc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 10:55:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"A verification code has been sent to your email\",\n        \"ar\": \"تم إرسال رمز التحقق إلى بريدك الإلكتروني\"\n    },\n    \"data\": {\n        \"mfaRequired\": true,\n        \"mfaSessionToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJwdXJwb3NlIjoibWZhX2NoYWxsZW5nZSIsIm90cEhhc2giOiJiZWFmZDQ1OTNmYjU3ZGNlMjQ5Yzg2NTZhMTNiMTZkODM2ZmI4ZjRlYzNmMTMyOWZlYTg1YjRkYTZiMzEwZDg0IiwiaWF0IjoxNzc5NDQ3MzQ1LCJleHAiOjE3Nzk0NDc2NDV9.8Vz6eYgR5zS55RXIWyb6vbliEA8FxXDgrHElsULLSew\"\n    }\n}"
+				},
+				{
+					"name": "Invalid password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\",\n  \"password\": \"Password@1234\",\n  \"captchaToken\": \"captcha-ok\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/login"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-4G/oGp2I4noUVzkU0AEdISq4qwQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:07:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Invalid password\",\n        \"ar\": \"كلمة المرور غير صالحة\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_401_INVALID_PASSWORD\",\n        \"details\": [\n            \"AUTH_INVALID_PASSWORD\"\n        ],\n        \"fields\": {}\n    }\n}"
+				},
+				{
+					"name": "Email not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kajal.gupta@kellton.comu\",\n  \"password\": \"Password@1234\",\n  \"captchaToken\": \"captcha-ok\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/login"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-/Z1jl/eR5rt//L/oNWCjUo7upRU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:07:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Email address not found\",\n        \"ar\": \"عنوان البريد الإلكتروني غير موجود\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_404_EMAIL_NOT_FOUND\",\n        \"details\": [\n            \"AUTH_EMAIL_NOT_FOUND\"\n        ],\n        \"fields\": {}\n    }\n}"
+				},
+				{
+					"name": "Account locked",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\",\n  \"password\": \"Password@1234\",\n  \"captchaToken\": \"captcha-ok\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/login"
+					},
+					"status": "Locked",
+					"code": 423,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "288"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"120-7D76wUpXKwQph3fUIT5FhADKwnk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:07:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Account is temporarily locked due to multiple failed attempts\",\n        \"ar\": \"الحساب مقفل مؤقتاً بسبب محاولات دخول متعددة فاشلة\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_423_ACCOUNT_LOCKED\",\n        \"details\": [\n            \"AUTH_INVALID_PASSWORD\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "MFA verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mfaSessionToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJwdXJwb3NlIjoibWZhX2NoYWxsZW5nZSIsIm90cEhhc2giOiJiNWU0NGZlODNkZTFmNDU0ODc3Y2E3YWU3ZjljYjgxYjY3OTQ3Y2Q1ODAyNGEyY2I0MzMzMTMyMTcyNDUyNGE4IiwiaWF0IjoxNzc5NDQ4MzQwLCJleHAiOjE3Nzk0NDg2NDB9.4SxpZB3ha0iY6PxPEM8zM9rnJxmtpkwiGCojgZsVSOA\",\n    \"otp\": \"662849\"\n  }"
+				},
+				"url": "http://localhost:3001/api/auth/login/mfa/verify"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mfaSessionToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJwdXJwb3NlIjoibWZhX2NoYWxsZW5nZSIsIm90cEhhc2giOiJiZWFmZDQ1OTNmYjU3ZGNlMjQ5Yzg2NTZhMTNiMTZkODM2ZmI4ZjRlYzNmMTMyOWZlYTg1YjRkYTZiMzEwZDg0IiwiaWF0IjoxNzc5NDQ3MzQ1LCJleHAiOjE3Nzk0NDc2NDV9.8Vz6eYgR5zS55RXIWyb6vbliEA8FxXDgrHElsULLSew\",\n    \"otp\": \"541175\"\n  }"
+						},
+						"url": "http://localhost:3001/api/auth/login/mfa/verify"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "841"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"349-n10MftBTPsA6t0xiRDzEDvpAXls\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 10:56:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Login successful\",\n        \"ar\": \"تم تسجيل الدخول بنجاح\"\n    },\n    \"data\": {\n        \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiZmRmMGNhMjItMzY1MS00MDMzLTlhMDMtN2VkYjI1NzU0ZDk0IiwibG9jYWxlIjoiYXIiLCJzY29wZSI6WyJhdXRoOnJlYWQiLCJhdXRoOndyaXRlIl0sImlhdCI6MTc3OTQ0NzQwNiwiZXhwIjoxNzc5NDQ4MzA2fQ.lf2nIDylkmZ1zBrEBvUx6rLGrO6Z9fTm4ZBgeB0cBMU\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiODk5YmJiYWYtM2Y2YS00YTU5LTliNzYtYzQ4YjJlNGNlM2UxIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDc0MDYsImV4cCI6MTc4MDA1MjIwNn0.VleQit0IrKqtuN5bCfp5wZ9uCNx2ufWkL0Za_mXaCSo\",\n        \"accountStatus\": \"ACTIVE\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiYWMwYWJiMTktNDEwMC00MDM0LTk2OGEtZTFlNjZkZDEzZjhlIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDgzNzMsImV4cCI6MTc4MDA1MzE3M30.mhQBgD92PaknFl9f-7BJiEvvorWZ6cgycFhIglefuLo\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/refresh"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiODk5YmJiYWYtM2Y2YS00YTU5LTliNzYtYzQ4YjJlNGNlM2UxIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDc0MDYsImV4cCI6MTc4MDA1MjIwNn0.VleQit0IrKqtuN5bCfp5wZ9uCNx2ufWkL0Za_mXaCSo\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/refresh"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "826"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33a-RvvywsUuPK5rd8Pq4n8KQWGyyuE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 10:57:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Token refreshed successfully\",\n        \"ar\": \"تم تجديد الرمز بنجاح\"\n    },\n    \"data\": {\n        \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiZDg1NWUxZTEtMGRlYi00MDEwLWFkNWQtNTJiM2ZiMDEyYzZiIiwibG9jYWxlIjoiYXIiLCJzY29wZSI6WyJhdXRoOnJlYWQiLCJhdXRoOndyaXRlIl0sImlhdCI6MTc3OTQ0NzQyMywiZXhwIjoxNzc5NDQ4MzIzfQ.JKZbJyn0DRdH01sbEb_9EkIp9mAFb9s1b65uYG5geGg\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiYjUzZmYxYzYtNzhlNS00NTdlLWIwZWEtN2JlMzA1MDk1MDJkIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDc0MjMsImV4cCI6MTc4MDA1MjIyM30.te8G_wOatemwd3HCeKsmzvWVrW8j29VNA1BgRH0Mbt8\"\n    }\n}"
+				},
+				{
+					"name": "Invalid token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiODk5YmJiYWYtM2Y2YS00YTU5LTliNzYtYzQ4YjJlNGNlM2UxIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDc0MDYsImV4cCI6MTc4MDA1MjIwNn0.VleQit0IrKqtuN5bCfp5wZ9uCNx2ufWkL0Za_mXaCSo\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/refresh"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-zezQTurxAgEHJ1aVTutO11XXWQs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:04:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Authentication token is invalid or expired\",\n        \"ar\": \"رمز المصادقة غير صالح أو منتهي الصلاحية\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_401_TOKEN_REVOKED\",\n        \"details\": [\n            \"AUTH_TOKEN_INVALID\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "UAE PASS SSO Start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/api/auth/uae-pass/start"
+			},
+			"response": [
+				{
+					"name": "UAE PASS SSO Start",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/auth/uae-pass/start"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "615"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"267-zLvlzN2pl9uhx8e9oTVwsx3M3nk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 10:57:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Redirect URL generated successfully\",\n        \"ar\": \"تم إنشاء رابط إعادة التوجيه بنجاح\"\n    },\n    \"data\": {\n        \"redirectUrl\": \"https://qa-id.uaepass.ae/trustedx-authserver/oauth/main-as?response_type=code&client_id=sandbox_stage&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fapi%2Fauth%2Fuae-pass%2Fcallback&scope=urn%3Auae%3Adigitalid%3Aprofile%3Ageneral&acr_values=urn%3Asafelayer%3Atws%3Apolicies%3Aauthentication%3Alevel%3Alow&ui_locales=en&state=7a7e839e-6f44-4a50-a8fe-da928bbc6345&nonce=8f05f081-8719-45ba-938e-d69fb0ad6d78\",\n        \"state\": \"7a7e839e-6f44-4a50-a8fe-da928bbc6345\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "UAE PASS Callback (GET)--ignore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/auth/uae-pass/callback?state=string&code=string",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"uae-pass",
+						"callback"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "string"
+						},
+						{
+							"key": "code",
+							"value": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UAE PASS Callback (POST) --ignore",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"state\": \"string\",\n  \"code\": \"string\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/uae-pass/callback"
+			},
+			"response": []
+		},
+		{
+			"name": "UAE PASS Logout --ignore",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": "{{baseUrl}}/api/auth/uae-pass/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password (Email)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/password/forgot-email"
+			},
+			"response": [
+				{
+					"name": "Forgot Password (Email)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/forgot-email"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"135-1clQ338QhEMs2JHhD1/NdKZ03ys\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 10:58:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Recovery instructions have been sent\",\n        \"ar\": \"تم إرسال تعليمات الاسترداد\"\n    },\n    \"data\": {\n        \"accepted\": true,\n        \"resetToken\": \"7117169f-546a-4dcb-bd85-cd3aaefbbb6d\",\n        \"resetUrl\": \"http://localhost:5173/auth/reset-password?resetToken=7117169f-546a-4dcb-bd85-cd3aaefbbb6d\"\n    }\n}"
+				},
+				{
+					"name": "Invalid email address",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kajal.gupta@kellton.comu\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/forgot-email"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-/Z1jl/eR5rt//L/oNWCjUo7upRU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:01:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Email address not found\",\n        \"ar\": \"عنوان البريد الإلكتروني غير موجود\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_404_EMAIL_NOT_FOUND\",\n        \"details\": [\n            \"AUTH_EMAIL_NOT_FOUND\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Forgot Password (OTP Initiate)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mobile\": \"8505815032\"\n}      "
+				},
+				"url": "{{baseUrl}}/api/auth/password/forgot-otp/initiate"
+			},
+			"response": [
+				{
+					"name": "Invalid mobile",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobile\": \"8505815032\"\n}      "
+						},
+						"url": "{{baseUrl}}/api/auth/password/forgot-otp/initiate"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "198"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c6-K+nbOwQFpANuOQhtdpGhZf/29qU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:00:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Mobile number not found\",\n        \"ar\": \"رقم الجوال غير موجود\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_404_MOBILE_NOT_FOUND\",\n        \"details\": [\n            \"AUTH_MOBILE_NOT_FOUND\"\n        ],\n        \"fields\": {}\n    }\n}"
+				},
+				{
+					"name": "Forgot Password (OTP Initiate)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobile\": \"8505815032\"\n}      "
+						},
+						"url": "{{baseUrl}}/api/auth/password/forgot-otp/initiate"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "245"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f5-wG/kSYg3J1G7UWhrGXpOmMxfwyk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:01:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Recovery instructions have been sent\",\n        \"ar\": \"تم إرسال تعليمات الاسترداد\"\n    },\n    \"data\": {\n        \"accepted\": true,\n        \"sessionToken\": \"43d5831e-ead9-49a0-afb9-d828dcec3bdc\",\n        \"otp\": \"123456\",\n        \"delivery\": \"850***32\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Forgot Password (OTP Verify)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sessionToken\": \"1c37926e-86f0-419c-9a92-9a4ebfe40ea4\",\n  \"otp\": \"123456\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/password/forgot-otp/verify"
+			},
+			"response": [
+				{
+					"name": "Forgot Password (OTP Verify)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sessionToken\": \"43d5831e-ead9-49a0-afb9-d828dcec3bdc\",\n  \"otp\": \"123456\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/forgot-otp/verify"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "174"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ae-pLSoDvHJ6iz4VzyrTgm2kEXUEao\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:02:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"OTP verified successfully\",\n        \"ar\": \"تم التحقق من رمز OTP بنجاح\"\n    },\n    \"data\": {\n        \"resetToken\": \"f5c8e0b9-a748-4817-acbc-8aed6a7c6332\"\n    }\n}"
+				},
+				{
+					"name": "Invalid otp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sessionToken\": \"43d5831e-ead9-49a0-afb9-d828dcec3bdc\",\n  \"otp\": \"400356\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/forgot-otp/verify"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d4-KYoCKBDBEll0K8005OYQy4RHEQU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:03:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"OTP is invalid or expired\",\n        \"ar\": \"رمز OTP غير صالح أو منتهي الصلاحية\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_401_OTP_INVALID\",\n        \"details\": [\n            \"AUTH_OTP_INVALID\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Password Reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resetToken\": \"16e2b07c-2ec8-4607-8060-536b25884b80\",\n  \"newPassword\": \"Amazing@432!\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/password/reset"
+			},
+			"response": [
+				{
+					"name": "New password cannot be same",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resetToken\": \"16e2b07c-2ec8-4607-8060-536b25884b80\",\n  \"newPassword\": \"Soul@08Part!!\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/reset"
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "373"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"175-PcMBw+8JSkszz+YgBU5f997WU08\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:03:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"New password cannot be the same as a previously used password\",\n        \"ar\": \"لا يمكن أن تكون كلمة المرور الجديدة هي نفسها كلمة مرور مستخدمة سابقاً\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_422_VALIDATION_ERROR\",\n        \"details\": [\n            \"AUTH_PASSWORD_REUSE_FORBIDDEN\"\n        ],\n        \"fields\": {\n            \"newPassword\": \"PASSWORD_REUSE_FORBIDDEN\"\n        }\n    }\n}"
+				},
+				{
+					"name": "New password doesnot meet required policy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resetToken\": \"16e2b07c-2ec8-4607-8060-536b25884b80\",\n  \"newPassword\": \"Chetan@41351\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/reset"
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "307"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"133-ofkn99HCygYEGfK99DmBqPEBIAc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:05:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"New password does not meet the required policy\",\n        \"ar\": \"كلمة المرور الجديدة لا تستوفي متطلبات السياسة\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_422_VALIDATION_ERROR\",\n        \"details\": [\n            \"PASSWORD_PERSONAL_INFO\"\n        ],\n        \"fields\": {\n            \"newPassword\": \"PASSWORD_PERSONAL_INFO\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Password Reset",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resetToken\": \"16e2b07c-2ec8-4607-8060-536b25884b80\",\n  \"newPassword\": \"Amazing@432!\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/reset"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a7-TyvBc70ZMVQT8tXeIlcmBQsUp/8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:05:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Password has been reset successfully\",\n        \"ar\": \"تمت إعادة تعيين كلمة المرور بنجاح\"\n    },\n    \"data\": {\n        \"completed\": true\n    }\n}"
+				},
+				{
+					"name": "Invalid reset token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resetToken\": \"16e2b07c-2ec8-4607-8060-536b25884b80\",\n  \"newPassword\": \"Amazing@432!\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/password/reset"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11d-xr+skCeqQ7J77UdQgDHfYqOA8MI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:06:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Password reset token is invalid or expired\",\n        \"ar\": \"رمز إعادة تعيين كلمة المرور غير صالح أو منتهي الصلاحية\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_401_RESET_TOKEN_INVALID\",\n        \"details\": [\n            \"AUTH_RESET_TOKEN_INVALID\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Unlock Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"unlockToken\": \"f1c96b7c-5ec1-4630-adec-69af7bc6cfec\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/account/unlock"
+			},
+			"response": [
+				{
+					"name": "Unlock Account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"unlockToken\": \"f1c96b7c-5ec1-4630-adec-69af7bc6cfec\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/account/unlock"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"99-Zstu+UZt94pm5qtBYXEl1s3vlkg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:08:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Account has been unlocked successfully\",\n        \"ar\": \"تم إلغاء قفل الحساب بنجاح\"\n    },\n    \"data\": {\n        \"unlocked\": true\n    }\n}"
+				},
+				{
+					"name": "Invalid reset token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"unlockToken\": \"f1c96b7c-5ec1-4630-adec-69af7bc6cfec\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/account/unlock"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11d-xr+skCeqQ7J77UdQgDHfYqOA8MI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:09:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Password reset token is invalid or expired\",\n        \"ar\": \"رمز إعادة تعيين كلمة المرور غير صالح أو منتهي الصلاحية\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_401_RESET_TOKEN_INVALID\",\n        \"details\": [\n            \"AUTH_RESET_TOKEN_INVALID\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiYjQ0OWU2ZjQtYzBjMi00MTllLWI5YjUtMzFkM2Y3NTgyMDU0IiwibG9jYWxlIjoiYXIiLCJzY29wZSI6WyJhdXRoOnJlYWQiLCJhdXRoOndyaXRlIl0sImlhdCI6MTc3OTQ0ODIyNCwiZXhwIjoxNzc5NDQ5MTI0fQ.ZxgPTCK5AzJ0OQBKzelmAXrMa73keHR01vbAsiOGaXw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiZDY2NzRhYTMtYjNhNi00NDZhLTlmNGEtZWI1NzVkMmRlMWZlIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDgyMjQsImV4cCI6MTc4MDA1MzAyNH0.DQRDWOsSjV6dWmc8KSzarFRgHg2OLZCSj7fcWzvlaLs\"\n}"
+				},
+				"url": "{{baseUrl}}/api/auth/logout"
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiYjQ0OWU2ZjQtYzBjMi00MTllLWI5YjUtMzFkM2Y3NTgyMDU0IiwibG9jYWxlIjoiYXIiLCJzY29wZSI6WyJhdXRoOnJlYWQiLCJhdXRoOndyaXRlIl0sImlhdCI6MTc3OTQ0ODIyNCwiZXhwIjoxNzc5NDQ5MTI0fQ.ZxgPTCK5AzJ0OQBKzelmAXrMa73keHR01vbAsiOGaXw"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiZDY2NzRhYTMtYjNhNi00NDZhLTlmNGEtZWI1NzVkMmRlMWZlIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDgyMjQsImV4cCI6MTc4MDA1MzAyNH0.DQRDWOsSjV6dWmc8KSzarFRgHg2OLZCSj7fcWzvlaLs\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/logout"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "132"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"84-E7dRgHIAKVGheVMRJrqFPRNY+0g\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:11:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": {\n        \"en\": \"Logged out successfully\",\n        \"ar\": \"تم تسجيل الخروج بنجاح\"\n    },\n    \"data\": {\n        \"loggedOut\": true\n    }\n}"
+				},
+				{
+					"name": "Invalid session",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiYjQ0OWU2ZjQtYzBjMi00MTllLWI5YjUtMzFkM2Y3NTgyMDU0IiwibG9jYWxlIjoiYXIiLCJzY29wZSI6WyJhdXRoOnJlYWQiLCJhdXRoOndyaXRlIl0sImlhdCI6MTc3OTQ0ODIyNCwiZXhwIjoxNzc5NDQ5MTI0fQ.ZxgPTCK5AzJ0OQBKzelmAXrMa73keHR01vbAsiOGaXw"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWM3Yjk5YS03M2U4LTQ3MjMtOTUwMy1jNzNjOWFlZWQzMDMiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiZDY2NzRhYTMtYjNhNi00NDZhLTlmNGEtZWI1NzVkMmRlMWZlIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzk0NDgyMjQsImV4cCI6MTc4MDA1MzAyNH0.DQRDWOsSjV6dWmc8KSzarFRgHg2OLZCSj7fcWzvlaLs\"\n}"
+						},
+						"url": "{{baseUrl}}/api/auth/logout"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ea-TXI36FqszCAYlsAquDpFICHywp4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 May 2026 11:11:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": {\n        \"en\": \"Session is invalid or has expired\",\n        \"ar\": \"الجلسة غير صالحة أو منتهية الصلاحية\"\n    },\n    \"error\": {\n        \"code\": \"AUTH_401_SESSION_INVALID\",\n        \"details\": [\n            \"AUTH_SESSION_INVALID\"\n        ],\n        \"fields\": {}\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3001"
+		},
+		{
+			"key": "authToken",
+			"value": ""
+		}
+	]
+}

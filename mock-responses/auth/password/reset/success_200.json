@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "Password reset completed successfully.",
+    "ar": "تمت إعادة تعيين كلمة المرور بنجاح."
+  },
+  "data": {
+    "completed": true,
+    "sessionRevoked": true
+  },
+  "timestamp": "2026-05-22T10:03:10Z",
+  "traceId": "trace-auth-password-reset-success",
+  "requestId": "req-auth-password-reset-success"
+}

@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 401,
+  "message": {
+    "en": "Authentication is required for UAE PASS logout.",
+    "ar": "المصادقة مطلوبة لتسجيل خروج UAE PASS."
+  },
+  "error": {
+    "code": "AUTH_UAEPASS_LOGOUT_UNAUTHORIZED",
+    "details": [
+      "Bearer token missing or invalid."
+    ],
+    "fields": {
+      "authorization": "required"
+    }
+  },
+  "timestamp": "2026-05-22T10:03:24Z",
+  "traceId": "trace-auth-uaepass-logout-unauthorized",
+  "requestId": "req-auth-uaepass-logout-unauthorized"
+}

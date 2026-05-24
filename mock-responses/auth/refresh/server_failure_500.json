@@ -1,0 +1,18 @@
+{
+  "success": false,
+  "statusCode": 500,
+  "message": {
+    "en": "Token service encountered an internal error.",
+    "ar": "واجهت خدمة الرموز خطأً داخليًا."
+  },
+  "error": {
+    "code": "AUTH_REFRESH_INTERNAL_ERROR",
+    "details": [
+      "Unable to persist refresh token rotation."
+    ],
+    "fields": {}
+  },
+  "timestamp": "2026-05-22T10:01:06Z",
+  "traceId": "trace-auth-refresh-server-failure",
+  "requestId": "req-auth-refresh-server-failure"
+}

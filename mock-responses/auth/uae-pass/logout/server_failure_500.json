@@ -1,0 +1,18 @@
+{
+  "success": false,
+  "statusCode": 500,
+  "message": {
+    "en": "Unable to create UAE PASS logout redirect.",
+    "ar": "تعذر إنشاء إعادة توجيه تسجيل خروج UAE PASS."
+  },
+  "error": {
+    "code": "AUTH_UAEPASS_LOGOUT_INTERNAL_ERROR",
+    "details": [
+      "Upstream logout URL generation failed."
+    ],
+    "fields": {}
+  },
+  "timestamp": "2026-05-22T10:03:25Z",
+  "traceId": "trace-auth-uaepass-logout-server-failure",
+  "requestId": "req-auth-uaepass-logout-server-failure"
+}

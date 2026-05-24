@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "message": {
+    "en": "Email address not found",
+    "ar": "عنوان البريد الإلكتروني غير موجود"
+  },
+  "error": {
+    "code": "AUTH_404_EMAIL_NOT_FOUND",
+    "details": [
+      "AUTH_EMAIL_NOT_FOUND"
+    ],
+    "fields": {}
+  }
+}

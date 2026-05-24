@@ -1,0 +1,21 @@
+{
+  "success": false,
+  "statusCode": 400,
+  "message": {
+    "en": "Invalid UAE PASS callback payload.",
+    "ar": "حمولة استدعاء UAE PASS غير صالحة."
+  },
+  "error": {
+    "code": "AUTH_INVALID_CALLBACK_PAYLOAD",
+    "details": [
+      "Either code or error must be provided with state."
+    ],
+    "fields": {
+      "code": "requiredWhenNoError",
+      "error": "requiredWhenNoCode"
+    }
+  },
+  "timestamp": "2026-05-22T10:02:05Z",
+  "traceId": "trace-auth-uaepass-callback-invalid-payload",
+  "requestId": "req-auth-uaepass-callback-invalid-payload"
+}

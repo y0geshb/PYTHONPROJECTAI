@@ -1,0 +1,34 @@
+{
+  "login": {
+    "email": "qa.user@testdomain.com",
+    "password": "TestPass#2026",
+    "captchaToken": "captcha-ok"
+  },
+  "refresh_token": {
+    "refreshToken": "replace-with-valid-refresh-token"
+  },
+  "uae_pass_callback": {
+    "state": "replace-with-oauth-state",
+    "code": "replace-with-authorization-code",
+    "emiratesId": "784000000000000"
+  },
+  "forgot_otp_initiate": {
+    "email": "qa.user@testdomain.com",
+    "mobile": "+971500000000"
+  },
+  "forgot_otp_verify": {
+    "otp": "000000",
+    "sessionToken": "replace-with-session-token"
+  },
+  "password_reset": {
+    "resetToken": "replace-with-reset-token",
+    "newPassword": "NewTestPass#2026"
+  },
+  "forgot_email": {
+    "email": "qa.user@testdomain.com"
+  },
+  "account_unlock": {
+    "email": "qa.user@testdomain.com",
+    "unlockToken": "replace-with-unlock-token"
+  }
+}

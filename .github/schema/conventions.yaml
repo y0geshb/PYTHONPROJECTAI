@@ -1,0 +1,20 @@
+naming:
+  tests: "test_<feature>_<scenario>"
+  files: "test_<module>.py"
+
+markers:
+  - smoke
+  - regression
+  - positive
+  - negative
+
+reports:
+  html: true
+  allure: true
+
+coverage:
+  minimum: 90
+
+api:
+  versioning: "/api/v1/"
+  auth: "Bearer"

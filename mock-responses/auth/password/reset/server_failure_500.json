@@ -1,0 +1,18 @@
+{
+  "success": false,
+  "statusCode": 500,
+  "message": {
+    "en": "Password reset failed due to internal error.",
+    "ar": "فشلت إعادة تعيين كلمة المرور بسبب خطأ داخلي."
+  },
+  "error": {
+    "code": "AUTH_PASSWORD_RESET_INTERNAL_ERROR",
+    "details": [
+      "Unable to revoke active sessions after password update."
+    ],
+    "fields": {}
+  },
+  "timestamp": "2026-05-22T10:04:02Z",
+  "traceId": "trace-auth-password-reset-server-failure",
+  "requestId": "req-auth-password-reset-server-failure"
+}

@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "OTP challenge initiated.",
+    "ar": "تم بدء تحدي رمز التحقق."
+  },
+  "data": {
+    "accepted": true,
+    "sessionToken": "forgot-otp-session-v1",
+    "otp": "294792",
+    "delivery": "SMS"
+  },
+  "timestamp": "2026-05-22T10:03:03Z",
+  "traceId": "trace-auth-forgot-otp-initiate-success",
+  "requestId": "req-auth-forgot-otp-initiate-success"
+}

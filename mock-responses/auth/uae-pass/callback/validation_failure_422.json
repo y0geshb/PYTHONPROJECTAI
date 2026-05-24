@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 422,
+  "message": {
+    "en": "UAE PASS callback failed schema validation.",
+    "ar": "فشل استدعاء UAE PASS في التحقق من المخطط."
+  },
+  "error": {
+    "code": "AUTH_CALLBACK_VALIDATION_FAILED",
+    "details": [
+      "state must be a non-empty string."
+    ],
+    "fields": {
+      "state": "required"
+    }
+  },
+  "timestamp": "2026-05-22T10:02:06Z",
+  "traceId": "trace-auth-uaepass-callback-validation-failure",
+  "requestId": "req-auth-uaepass-callback-validation-failure"
+}

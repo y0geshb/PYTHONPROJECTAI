@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 409,
+  "message": {
+    "en": "Too many OTP requests. Please try again later.",
+    "ar": "طلبات رمز تحقق كثيرة جدًا. يرجى المحاولة لاحقًا."
+  },
+  "error": {
+    "code": "AUTH_OTP_RATE_LIMITED",
+    "details": [
+      "Maximum OTP initiation attempts reached for this identity."
+    ],
+    "fields": {
+      "mobile": "rateLimited"
+    }
+  },
+  "timestamp": "2026-05-22T10:03:05Z",
+  "traceId": "trace-auth-forgot-otp-initiate-rate-limited",
+  "requestId": "req-auth-forgot-otp-initiate-rate-limited"
+}

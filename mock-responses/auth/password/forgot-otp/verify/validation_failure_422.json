@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "statusCode": 422,
+  "message": {
+    "en": "OTP verification request failed validation.",
+    "ar": "فشل طلب التحقق من رمز التحقق في التحقق."
+  },
+  "error": {
+    "code": "AUTH_FORGOT_OTP_VERIFY_VALIDATION_FAILED",
+    "details": [
+      "sessionToken is required.",
+      "otp must be between 4 and 10 characters."
+    ],
+    "fields": {
+      "sessionToken": "required",
+      "otp": "length"
+    }
+  },
+  "timestamp": "2026-05-22T10:03:09Z",
+  "traceId": "trace-auth-forgot-otp-verify-validation-failure",
+  "requestId": "req-auth-forgot-otp-verify-validation-failure"
+}

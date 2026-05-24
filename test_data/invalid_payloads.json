@@ -1,0 +1,208 @@
+{
+  "auth_login": [
+    {
+      "case": "Missing email field",
+      "payload": {
+        "password": "TestPass#2026"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Missing password field",
+      "payload": {
+        "email": "testuser@testdomain.com"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Email without @ symbol",
+      "payload": {
+        "email": "testusertestdomain.com",
+        "password": "TestPass#2026"
+      },
+      "expected_status": 422
+    },
+    {
+      "case": "Email with spaces",
+      "payload": {
+        "email": "test user@testdomain.com",
+        "password": "TestPass#2026"
+      },
+      "expected_status": 422
+    },
+    {
+      "case": "Empty email string",
+      "payload": {
+        "email": "",
+        "password": "TestPass#2026"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Empty password string",
+      "payload": {
+        "email": "testuser@testdomain.com",
+        "password": ""
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Null email value",
+      "payload": {
+        "email": null,
+        "password": "TestPass#2026"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Null password value",
+      "payload": {
+        "email": "testuser@testdomain.com",
+        "password": null
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Empty request body",
+      "payload": {},
+      "expected_status": 400
+    },
+    {
+      "case": "Unknown field added",
+      "payload": {
+        "email": "testuser@testdomain.com",
+        "password": "TestPass#2026",
+        "unknownField": "shouldBeIgnoredOrRejected"
+      },
+      "expected_status": 400
+    }
+  ],
+  "users_create": [
+    {
+      "case": "Missing name field",
+      "payload": {
+        "email": "newuser@testdomain.com",
+        "role": "analyst",
+        "department": "Finance"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Missing email field",
+      "payload": {
+        "name": "Test User",
+        "role": "analyst",
+        "department": "Finance"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Invalid email format — no @ symbol",
+      "payload": {
+        "name": "Test User",
+        "email": "nouseratsign.com",
+        "role": "analyst",
+        "department": "Finance"
+      },
+      "expected_status": 422
+    },
+    {
+      "case": "Empty string for required field — name",
+      "payload": {
+        "name": "",
+        "email": "testuser@testdomain.com",
+        "role": "analyst",
+        "department": "Finance"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Name value too long — 500 characters",
+      "payload": {
+        "name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "email": "testuser@testdomain.com",
+        "role": "analyst",
+        "department": "Finance"
+      },
+      "expected_status": 422
+    },
+    {
+      "case": "Wrong data type — number where string expected for name",
+      "payload": {
+        "name": 12345,
+        "email": "testuser@testdomain.com",
+        "role": "analyst",
+        "department": "Finance"
+      },
+      "expected_status": 422
+    },
+    {
+      "case": "All fields null",
+      "payload": {
+        "name": null,
+        "email": null,
+        "role": null,
+        "department": null
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "All fields empty strings",
+      "payload": {
+        "name": "",
+        "email": "",
+        "role": "",
+        "department": ""
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Empty request body",
+      "payload": {},
+      "expected_status": 400
+    },
+    {
+      "case": "Unknown field injected",
+      "payload": {
+        "name": "Test User",
+        "email": "testuser@testdomain.com",
+        "role": "analyst",
+        "department": "Finance",
+        "unknownField": "injection_attempt"
+      },
+      "expected_status": 400
+    }
+  ],
+  "users_update": [
+    {
+      "case": "Empty string for name",
+      "payload": {
+        "name": "",
+        "department": "Finance"
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Name too long — 500 characters",
+      "payload": {
+        "name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "department": "Finance"
+      },
+      "expected_status": 422
+    },
+    {
+      "case": "All fields null",
+      "payload": {
+        "name": null,
+        "department": null
+      },
+      "expected_status": 400
+    },
+    {
+      "case": "Empty request body",
+      "payload": {},
+      "expected_status": 400
+    }
+  ]
+}
+

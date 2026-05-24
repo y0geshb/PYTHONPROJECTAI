@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 422,
+  "message": {
+    "en": "Password reset payload failed validation.",
+    "ar": "فشلت حمولة إعادة تعيين كلمة المرور في التحقق."
+  },
+  "error": {
+    "code": "AUTH_PASSWORD_RESET_VALIDATION_FAILED",
+    "details": [
+      "newPassword must be between 10 and 128 characters."
+    ],
+    "fields": {
+      "newPassword": "length"
+    }
+  },
+  "timestamp": "2026-05-22T10:03:12Z",
+  "traceId": "trace-auth-password-reset-validation-failure",
+  "requestId": "req-auth-password-reset-validation-failure"
+}

@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 401,
+  "message": {
+    "en": "Refresh token has expired.",
+    "ar": "انتهت صلاحية رمز التحديث."
+  },
+  "error": {
+    "code": "AUTH_TOKEN_EXPIRED",
+    "details": [
+      "Request re-authentication to establish a new session."
+    ],
+    "fields": {
+      "refreshToken": "expired"
+    }
+  },
+  "timestamp": "2026-05-22T10:01:02Z",
+  "traceId": "trace-auth-refresh-expired-token",
+  "requestId": "req-auth-refresh-expired-token"
+}

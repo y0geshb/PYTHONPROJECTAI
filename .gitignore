@@ -1,0 +1,35 @@
+# Environment and secrets — NEVER commit this file
+.env
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# pytest cache
+.pytest_cache/
+
+# Test reports
+reports/*.html
+reports/*.json
+allure-results/
+
+# IDE settings
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archived legacy files
+Archieve/
+Archieves/
+

@@ -1,0 +1,18 @@
+{
+  "success": false,
+  "statusCode": 502,
+  "message": {
+    "en": "UAE PASS upstream service is unavailable.",
+    "ar": "خدمة UAE PASS العليا غير متاحة."
+  },
+  "error": {
+    "code": "AUTH_UAEPASS_UPSTREAM_FAILURE",
+    "details": [
+      "Failed to exchange authorization code with provider."
+    ],
+    "fields": {}
+  },
+  "timestamp": "2026-05-22T10:02:07Z",
+  "traceId": "trace-auth-uaepass-callback-server-failure",
+  "requestId": "req-auth-uaepass-callback-server-failure"
+}

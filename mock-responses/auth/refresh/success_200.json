@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": {
+    "en": "Session tokens rotated successfully.",
+    "ar": "تم تدوير رموز الجلسة بنجاح."
+  },
+  "data": {
+    "authToken": "jwt-access-token-v2",
+    "refreshToken": "jwt-refresh-token-v2",
+    "session": {
+      "rotation": "ROTATED",
+      "previousTokenRevoked": true
+    }
+  },
+  "timestamp": "2026-05-22T10:01:00Z",
+  "traceId": "trace-auth-refresh-success",
+  "requestId": "req-auth-refresh-success"
+}

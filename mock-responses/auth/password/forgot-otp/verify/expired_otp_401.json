@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 401,
+  "message": {
+    "en": "OTP has expired.",
+    "ar": "انتهت صلاحية رمز التحقق."
+  },
+  "error": {
+    "code": "AUTH_OTP_EXPIRED",
+    "details": [
+      "Generate a new OTP and retry verification."
+    ],
+    "fields": {
+      "otp": "expired"
+    }
+  },
+  "timestamp": "2026-05-22T10:03:08Z",
+  "traceId": "trace-auth-forgot-otp-verify-expired-otp",
+  "requestId": "req-auth-forgot-otp-verify-expired-otp"
+}

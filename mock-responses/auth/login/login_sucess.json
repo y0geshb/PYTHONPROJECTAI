@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "message": {
+    "en": "A verification code has been sent to your email",
+    "ar": "تم إرسال رمز التحقق إلى بريدك الإلكتروني"
+  },
+  "data": {
+    "mfaRequired": true,
+    "mfaSessionToken": "fake-mfa-session-token"
+  }
+}

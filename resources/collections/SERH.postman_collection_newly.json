@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "874c77eb-73a3-4899-8cd8-4dc20fc0e807",
+		"name": "SERH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24807055"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\",\n  \"password\": \"Password@1234\",\n  \"captchaToken\": \"captcha-ok\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZjEwN2FjNC05NTQ4LTQ1YjYtYjQ2My00MzI2ZGJjNTU5MTAiLCJlbWFpbCI6ImthamFsLmd1cHRhQGtlbGx0b24uY29tIiwianRpIjoiZjdjNjQzNTktMzBjZC00NjNkLWI3ODEtMGVhZjk2MzM2N2ViIiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3Nzg0ODY2MTcsImV4cCI6MTc3OTA5MTQxN30.C6imhbEJlyQReUTRKHd7ShifLf5gzkgtaJGiWiiXxx4\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/refresh"
+			},
+			"response": []
+		},
+		{
+			"name": "UAE Pass start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/auth/uae-pass/start"
+			},
+			"response": []
+		},
+		{
+			"name": "UAE Pass callback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"state\": \"612d972e-e0bb-4228-83f9-d76e055a2539\",\n  \"code\": \"authorization-code\",\n  \"emiratesId\": \"784198765432109\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/uae-pass/callback"
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot otp initiate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"kajal.gupta@kellton.com\",\n\"mobile\": \"+971500000000\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/password/forgot-otp/initiate"
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot otp verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"otp\": \"294792\",\n  \"sessionToken\": \"1b43faa3-45c8-4d1b-82aa-e732bdda1a0a\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/password/forgot-otp/verify"
+			},
+			"response": []
+		},
+		{
+			"name": "Password Reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resetToken\": \"e8086a0d-bda7-4438-b553-5d47fcf7e7a3\",\n  \"newPassword\": \"NewPassword@1234\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/password/reset"
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/password/forgot-email"
+			},
+			"response": []
+		},
+		{
+			"name": "Account Unlock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"kajal.gupta@kellton.com\",\n  \"unlockToken\": \"27284cab-fa56-464d-9c62-a0dc66f0aed3\"\n}"
+				},
+				"url": "http://localhost:3000/api/auth/account/unlock"
+			},
+			"response": []
+		}
+	]
+}

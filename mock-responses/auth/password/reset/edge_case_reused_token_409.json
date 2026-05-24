@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "statusCode": 409,
+  "message": {
+    "en": "Reset token has already been consumed.",
+    "ar": "تم استخدام رمز إعادة التعيين بالفعل."
+  },
+  "error": {
+    "code": "AUTH_RESET_TOKEN_ALREADY_USED",
+    "details": [
+      "Reset token is single-use and cannot be reused."
+    ],
+    "fields": {
+      "resetToken": "alreadyUsed"
+    }
+  },
+  "timestamp": "2026-05-22T10:03:13Z",
+  "traceId": "trace-auth-password-reset-reused-token",
+  "requestId": "req-auth-password-reset-reused-token"
+}
