@@ -120,7 +120,7 @@ It automates:
 
 ### Usage Example
 ```sh
-python setup_github.py --repo-url https://github.com/y0geshb/PYTHONPROJECTAI.git --branch main --message "Initial commit"
+python setup_github.py --repo-url https://github.com/y0geshb/PYTHONPROJECTAI.git --branch main --message "Initial commit" --git-user-name "y0geshb" --git-user-email "yogesh.bhaganagare@kellton.com"
 ```
 
 ### Using Environment Variables
@@ -128,6 +128,8 @@ python setup_github.py --repo-url https://github.com/y0geshb/PYTHONPROJECTAI.git
 $env:GITHUB_REPO_URL="https://github.com/y0geshb/PYTHONPROJECTAI.git"
 $env:GIT_BRANCH="main"
 $env:GIT_COMMIT_MSG="Initial commit"
+$env:GIT_USER_NAME="y0geshb"
+$env:GIT_USER_EMAIL="yogesh.bhaganagare@kellton.com"
 python setup_github.py
 ```
 
@@ -191,7 +193,7 @@ pytest tests/auth/test_serh_login.py
 pytest tests/ -v --html=reports/report.html --self-contained-html
 
 # Automate GitHub push
-python setup_github.py --repo-url https://github.com/y0geshb/PYTHONPROJECTAI.git --branch main --message "Initial commit"
+python setup_github.py --repo-url https://github.com/y0geshb/PYTHONPROJECTAI.git --branch main --message "Initial project commit" --git-user-name "y0geshb" --git-user-email "yogesh.bhaganagare@kellton.com"
 ```
 
 ---
