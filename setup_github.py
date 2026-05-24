@@ -149,6 +149,31 @@ def set_remote(repo_url):
         log("Adding remote 'origin'...")
         run(["git", "remote", "add", "origin", repo_url])
 
+
+def ensure_branch(branch):
+    current_branch = subprocess.run(
+        ["git", "branch", "--show-current"],
+        check=False,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+
+    if current_branch == branch:
+        log(f"Already on branch '{branch}'.")
+        return
+
+    existing_branches = subprocess.run(
+        ["git", "branch", "--list", branch],
+        check=False,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+
+    if existing_branches:
+        run(["git", "checkout", branch])
+    else:
+        run(["git", "checkout", "-B", branch])
+
 def push_to_github(branch):
     try:
         run(["git", "push", "-u", "origin", branch])
@@ -179,6 +204,7 @@ def main():
     ensure_git_identity(args.git_user_name, args.git_user_email)
     add_all_and_commit(args.message)
     set_remote(args.repo_url)
+    ensure_branch(args.branch)
     push_to_github(args.branch)
     log(f"Project pushed to {args.repo_url} on branch {args.branch}.")
     log("GitHub setup complete!")
